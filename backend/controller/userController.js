@@ -1,5 +1,6 @@
 const User = require('../models/userModel')
 const Wallet = require('../models/walletModel')
+const Transaction = require('../models/transactionModel')
 const jwt = require('jsonwebtoken')
 
 const createToken = (_id) => {
@@ -12,6 +13,7 @@ const loginUser = async (req, res) => {
         // retrieve user and wallet
         const user = await User.login(phone, password)
         const wallet = await Wallet.findOne({ userId: user._id });
+        // const transaction = await Transaction.findOne({ userId: user._id });
         // create a token
         const token = createToken(user._id)
     
@@ -28,10 +30,11 @@ const signinUser = async (req, res) => {
         const user = await User.signup(name, phone, email, password)
         // create new wallet for user
         const wallet =  await Wallet.create({ userId: user._id });
+        const transaction =  await Transaction.create({ userId: user._id });
          // create a token
         const token = createToken(user._id)
 
-        res.status(200).json({user, token, message: "Account created successfully"})
+        res.status(200).json({user, token, transaction, message: "Account created successfully"})
     } catch (error) {
         res.status(404).json({error: error.message})
     }

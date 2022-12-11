@@ -10,14 +10,14 @@ const createToken = (_id) => {
 const loginUser = async (req, res) => {
     const {phone, password} = req.body
     try {
-        // retrieve user and wallet
+        // retrieve user and wallet and transaction history
         const user = await User.login(phone, password)
         const wallet = await Wallet.findOne({ userId: user._id });
-        // const transaction = await Transaction.findOne({ userId: user._id });
+        const transaction = await Transaction.findOne({ userId: user._id });
         // create a token
         const token = createToken(user._id)
     
-        res.status(200).json({user, wallet, token, message : "Log in successfully"})
+        res.status(200).json({user, wallet, transaction, token, message : "Log in successfully"})
     } catch (error) {
         res.status(404).json({error: error.message})
     }
@@ -28,13 +28,13 @@ const signinUser = async (req, res) => {
     const {name, phone, email, password} = req.body
     try {
         const user = await User.signup(name, phone, email, password)
-        // create new wallet for user
-        const wallet =  await Wallet.create({ userId: user._id });
-        const transaction =  await Transaction.create({ userId: user._id });
+        // create new wallet and transaction history for user
+         await Wallet.create({ userId: user._id });
+         await Transaction.create({ userId: user._id });
          // create a token
         const token = createToken(user._id)
 
-        res.status(200).json({user, token, transaction, message: "Account created successfully"})
+        res.status(200).json({user, token, message: "Account created successfully"})
     } catch (error) {
         res.status(404).json({error: error.message})
     }

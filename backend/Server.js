@@ -4,6 +4,7 @@ const express = require('express');
 const compression = require('compression')
 const mongoose = require("mongoose");
 const cors = require("cors")
+const userRoutes = require('./routes/user')
 
 
 // express app

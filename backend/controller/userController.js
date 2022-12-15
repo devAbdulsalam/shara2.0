@@ -40,7 +40,43 @@ const signinUser = async (req, res) => {
     }
 }
 
+// // forget Password
+const forgetPassword = async (req, res) => {
+    const {email} = req.body
+    try {
+        const user = await User.fgtpswd(email)
+        // create a token
+        const token = passwordToken(user.email, user._id)
+        
+        const link = `http://localhost:4000/reset-password/${user._id}/${token}`;
+        
+        res.status(200).json({link, token, message : "Password reset link sent"})
+    } catch (error) {
+        res.status(404).json({error: error.message})
+    }
+}
+
+// // reset Password
+const resetPassword = async (req, res) => {
+    const {id, token} = params
+    try {
+        const user = await User.resetpswd(id)
+        // // create a token
+        const secret = passwordToken(user.email, user._id)
+        // // verify the token
+        const verify =  jwt.verify(token, secret);
+        if(!verify){
+           res.status(401).json({error: "verification failed"}) 
+        }
+        res.status(200).json({verify, token, message : "Password Reset Successfully"})
+    } catch (error) {
+        res.status(404).json({error: error.message})
+    }
+}
+
 module.exports = {
     signinUser,
-    loginUser
+    loginUser,
+    forgetPassword,
+    resetPassword
 }

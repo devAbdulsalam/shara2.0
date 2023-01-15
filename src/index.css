@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,77 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.debug{
+  border: 1px red solid;
+}
+.hero img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  
+}
+.hero-bg-gradient{
+  background-image: linear-gradient(90deg, #11aeaf, #84f796);
+    height: 96%;
+}
+.bg-elements{
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 2000px;
+}
+.dots{
+  background-image: url("https://global-uploads.webflow.com/62ab0d6ce96d28cc9c7dfea8/62ab0d6ce96d28f8367e0058_circle-pattern-white.svg");
+  background-position: 0% 0%;
+  background-size: 12px;
+  opacity: 0.16;
+  width: 297px;
+  height: 118px;
+  will-change: transform; 
+  transform: translate3d(0px, 7.52016%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+.circle-big{
+  opacity: 0.16;
+}
+.circle-small{
+  will-change: transform;    transform: translate3d(0px, 4.41056%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+    opacity: 0.16;
+}
+.feature-1{
+  background-image: linear-gradient(180deg, #00a80ea4, #04884a);
+}
+.feature-4{
+  background-image: linear-gradient(0deg, #6d00dc, #c03cff);
+}
+.feature-2{
+  background-image: linear-gradient(180deg, #ffb833, #f13030);
+}
+.feature-3{
+  background-image: linear-gradient(180deg, #50a0ff, #0052e2);
+}
+
+/* testimonial */
+
+
+
+
+/* styled scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #05ee94;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #08f52f;
 }

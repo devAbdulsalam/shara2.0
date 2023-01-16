@@ -26,7 +26,7 @@ export const useLogin = () => {
       setLoading(false)
     }
     
-  axios.post('http://localhost:4000/user/login', user)
+  axios.post('https://shara-api.onrender.com/user/login', user)
      .then(res => res.data)
      .then(data => {
        console.log(data.message)
@@ -60,7 +60,7 @@ export const useLogin = () => {
       setLoading(false)
     }
     
-  axios.post('http://localhost:4000/user/forget-password', user)
+  axios.post('https://shara-api.onrender.com/user/forget-password', user)
      .then(res => res.data)
      .then(data => {
        setSuccess(data.message)       
@@ -78,7 +78,7 @@ export const useLogin = () => {
     setError(null)
     setSuccess(null)
     const {id, token} = user
-   axios.get(`http://localhost:4000/user/reset-password/${id}/${token}`, {
+   axios.get(`https://shara-api.onrender.com/user/reset-password/${id}/${token}`, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -114,7 +114,7 @@ export const useLogin = () => {
       setLoading(false)
     }
     
-  axios.post('http://localhost:4000/user/change-password', user)
+  axios.post('https://shara-api.onrender.com/user/change-password', user)
      .then(res => res.data)
      .then(data => {
        setSuccess(data.message)

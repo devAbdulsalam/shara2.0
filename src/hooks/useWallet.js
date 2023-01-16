@@ -49,7 +49,7 @@ export const useWallet = () => {
         setError("invalid wallet number.")
         setLoading(false)
       }    
-      axios.post('http://localhost:4000/wallet/check-wallet', phone)
+      axios.post('https://shara-api.onrender.com/wallet/check-wallet', phone)
         .then(res => res.data)
         .then(data => {
             setSuccess(data?.user?.name)          

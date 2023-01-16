@@ -24,7 +24,7 @@ export const useSignup = () => {
       return
     }
     
-  axios.post('http://localhost:4000/user/signup', user)
+  axios.post('https://shara-api.onrender.com/user/signup', user)
      .then(res => res.data)
      .then(data => {
        console.log(data.message)

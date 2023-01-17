@@ -3,13 +3,13 @@ export const menuLinks = [
     { name: "Order", link: "./location", icon : "trash-bin"},
     { name: "Wallet", link: "./wallet", icon : "wallet"},
     { name: "Profile", link: "./profile", icon : "person"},
-    { name: "About", link: "/about", icon : "information-circle"},
+    { name: "About", link: "./about", icon : "information-circle"},
   ];
 export const newLinks = [
     { name: "Home", link: "./", icon :"home" },
-    { name: "Log in", link: "/login", icon : "log-out"},
-    { name: "Sign up", link: "/signin", icon : "person-add-outline"},
-    { name: "About", link: "/about", icon : "information-circle"},
+    { name: "Log in", link: "./login", icon : "log-out"},
+    { name: "Sign up", link: "./signin", icon : "person-add-outline"},
+    { name: "About", link: "./about", icon : "information-circle"},
   ];
 
 // // Wastes

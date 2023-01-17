@@ -33,16 +33,16 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route path="/" element={<Welcome /> }></Route>
             <Route element={<ProtectedRoutes/>}>
-              <Route path="/calculate" element={<Calculate /> } />
-              <Route path="/dashboard" element={<Dashboard /> } />
-              <Route path="/profile" element={<Profile /> } />
-              <Route path="/wallet" element={<Wallet /> } />
-              <Route path="/receive" element={<Receive /> } />
-              <Route path="/withdraw" element={<Withdraw /> } />
-              <Route path="/chat" element={<Chat /> } />
-              <Route path="/wasteinfo" element={<WasteInfo /> } />
-              <Route path="/location" element={<Location /> } />
-              <Route path="/pay/:amount" element={<Pay /> } />
+              <Route path="./calculate" element={<Calculate /> } />
+              <Route path="./dashboard" element={<Dashboard /> } />
+              <Route path="./profile" element={<Profile /> } />
+              <Route path="./wallet" element={<Wallet /> } />
+              <Route path="./receive" element={<Receive /> } />
+              <Route path="./withdraw" element={<Withdraw /> } />
+              <Route path="./chat" element={<Chat /> } />
+              <Route path="./wasteinfo" element={<WasteInfo /> } />
+              <Route path="./location" element={<Location /> } />
+              <Route path="./pay/:amount" element={<Pay /> } />
             </Route>
             <Route path="/login" element={!user ? <Login /> : <Navigate  to="/dashboard" />} />
             <Route  path="/signup" element={!user ? <Signup /> : <Navigate  to="/dashboard" />} />

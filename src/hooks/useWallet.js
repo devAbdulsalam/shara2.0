@@ -82,6 +82,7 @@ export const useWallet = () => {
             setError(error ? error.response?.data.error || error.message : error )
         })
     }
+    
     // // receive money
     const receiveMoney = (data) =>{
         // let data = {amount : 103000, pin, phone : "7997r65656345", id, token}

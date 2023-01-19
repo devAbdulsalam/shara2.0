@@ -6,7 +6,7 @@ const ProtectedRoutes = () => {
   const { user } = useContext(AuthContext)
   const location = useLocation()
 
-   return (!user ? <Navigate to="/login" state={{path : location.pathname}}/> : <Outlet/>)
+   return (!user ? <Navigate to="/login" state={{from: location.pathname}} replace/> : <Outlet/>)
   
 }
 

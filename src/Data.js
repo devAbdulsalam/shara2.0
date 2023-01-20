@@ -1,8 +1,8 @@
 export const menuLinks = [
-  { name: "Home", link: "../dashboard", icon: "home" },
+  { name: "Home", link: "./dashboard", icon: "home" },
   { name: "Order", link: "./location", icon: "trash-bin" },
   { name: "Wallet", link: "./wallet", icon: "wallet" },
-  { name: "Profile", link: "../profile", icon: "person" },
+  { name: "Profile", link: "./profile", icon: "person" },
   { name: "About", link: "./about", icon: "information-circle" },
 ];
 export const newLinks = [

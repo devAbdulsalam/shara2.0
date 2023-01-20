@@ -30,7 +30,6 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route path="/" element={<Welcome />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="calculate" element={<Calculate />} />
           <Route path="dashboard" element={<Dashboard />} />
@@ -49,6 +48,7 @@ function App() {
         <Route path="/forgetPassword" element={!user ? <ForgetPassword /> : <Navigate to="/dashboard" />} />
         <Route path="/resetPassword" element={<ResetPassword />} />
         <Route path="/resetPassword/:id/:token" element={<ResetPassword />} />
+        <Route path="/" element={<Welcome />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

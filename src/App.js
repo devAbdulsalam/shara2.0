@@ -30,13 +30,13 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route path="/" element={<ProtectedRoutes />}>
-          <Route path="calculate" element={<Calculate />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="wallet" element={<Wallet />} />
-          <Route path="receive" element={<Receive />} />
-          <Route path="withdraw" element={<Withdraw />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/calculate" element={<Calculate />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/receive" element={<Receive />} />
+          <Route path="/withdraw" element={<Withdraw />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/wasteinfo" element={<WasteInfo />} />
           <Route path="/location" element={<Location />} />

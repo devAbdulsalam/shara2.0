@@ -7,7 +7,7 @@ export const menuLinks = [
 ];
 export const newLinks = [
   { name: "Home", link: "./", icon: "home" },
-  { name: "Log in", link: "./login", icon: "log-out" },
+  { name: "Log in", link: "./", icon: "log-out" },
   { name: "Sign up", link: "./signin", icon: "person-add-outline" },
   { name: "About", link: "./about", icon: "information-circle" },
 ];

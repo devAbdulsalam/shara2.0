@@ -19,7 +19,7 @@ export const useLogout = () => {
     // setIsOpen(false)
     // //dispatch logout action
     dispatch({ type: ACTION_TYPES.LOGOUT })
-    navigate('/login')
+    navigate('/')
   }
 
   return { logout }

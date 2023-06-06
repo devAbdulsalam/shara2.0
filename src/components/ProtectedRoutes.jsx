@@ -5,6 +5,7 @@ import { AuthContext } from '../context/AuthContext'
 const ProtectedRoutes = () => {
   const { user } = useContext(AuthContext)
   const location = useLocation()
+  console.log(user)
 
   return (user ? <Outlet /> : <Navigate to="/login" state={{ path: location.pathname }} replace />)
 

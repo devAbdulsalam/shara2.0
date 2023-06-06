@@ -9,15 +9,22 @@ import Bot from "../components/Bot";
 
 const Dashboard = () => {
   const {user} = useContext(AuthContext);
-  const {wallet} = useWallet()
-  const phone = user.user?.phone 
+  const { wallet, loading, error } = useWallet();
+  const phone = user.user?.phone
   useEffect(()=>{
     wallet({phone})
-  },[phone])
+  }, [phone, wallet])
+  if (loading) {
+    return <p className="text-5xl text-center">Loading</p>
+  }
+  if (error) {
+    console.log(error);
+		return <p className="text-5xl text-center text-red-600">Error</p>;
+	}
   return (
     <div>
       <Bot />
-      <div className="h-36 bg-transparent rounded-b-[30%] px-7">
+      <div className="h-36 bg-transparent rounded-b-[30%] px-7 debug">
         <Splide className="mt-16 p-3" aria-label="myimges">
           <SplideSlide>
             <img src={RecycleBin} alt="Img1" />

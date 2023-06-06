@@ -142,7 +142,7 @@ const Signup = () => {
 								</div>
 							)}
 
-							<div className="flex justify-between sm:text-sm text-lg my-6 items-center text-gray-600">
+							<div className="flex justify-between sm:text-sm text-lg my-3 items-center text-gray-600">
 								<label htmlFor="rememberMe">
 									<input className="mr-2 text-lg" type="checkbox" />
 									Remember me
@@ -154,7 +154,7 @@ const Signup = () => {
 									Forget Password
 								</Link>
 							</div>
-							<p className="py-2 text-gray-600">
+							<p className="py- text-gray-600">
 								Already on Shara?{' '}
 								<Link to={'/'} className="text-green-700">
 									Login

@@ -25,14 +25,15 @@ const Dashboard = () => {
 		<div>
 			<Bot />
 			<div className="h-36 bg-transparent rounded-b-[30%] px-7">
-				<Splide className="mt-16 p-3" aria-label="myimges">
+				{/* <Splide className="mt-16 p-3" aria-label="myimges">
 					<SplideSlide>
 						<img src={RecycleBin} alt="Img1" />
 					</SplideSlide>
 					<SplideSlide>
 						<img src={RecycleBin} alt="Img2" />
 					</SplideSlide>
-				</Splide>
+				</Splide> */}
+				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in neque quasi culpa adipisci repudiandae.</p>
 			</div>
 			<div className="mt-10 md:mx-32 mx-5 py-5">
 				<div className="grid grid-cols-2 gap-x-4 gap-y-6">
@@ -113,7 +114,7 @@ const Dashboard = () => {
 							<p className="font-bold text-lg leading-tight">Wallet</p>
 						</div>
 					</a>
-					<a href="./wasteinfo">
+					<a href="./calender">
 						<div className="bg-white rounded-lg text-[#228e01] hover:bg-green-200  p-4 space-y-2 shadow-lg">
 							<div className="">
 								<svg
@@ -128,7 +129,7 @@ const Dashboard = () => {
 									/>
 								</svg>
 							</div>
-							<p className="font-bold text-lg leading-tight">Tips</p>
+							<p className="font-bold text-lg leading-tight">Calender</p>
 						</div>
 					</a>
 					<a href="./climate">

@@ -19,6 +19,7 @@ import Withdraw from './pages/wallet/Withdraw';
 import Profile from './pages/profile/Profile';
 import Calculate from './pages/Calculate';
 import WasteInfo from './pages/WasteInfo';
+import Calender from './pages/Calender';
 import Location from './pages/Location';
 import Layout from './Layout';
 import About from './pages/About';
@@ -38,7 +39,7 @@ function App() {
 						<Route path="/receive" element={<Receive />} />
 						<Route path="/withdraw" element={<Withdraw />} />
 						<Route path="/chat" element={<Chat />} />
-						<Route path="/wasteinfo" element={<WasteInfo />} />
+						<Route path="/calender" element={<Calender />} />
 						<Route path="/pay/:amount" element={<Pay />} />
 						<Route path="/location" element={<Location />} />
 					</Route>

@@ -44,7 +44,7 @@ const Pay = () => {
   }
   return (
     <div className="p-1 mt-8 mx-2 py-10 h-screen relative">
-        <h3 className='text-center text-2xl font-semibold m-4'>Pay</h3>
+        <h3 className='text-center text-2xl font-semibold m-4'>Make Payment</h3>
         <form onSubmit={handleSubmit}>
         <h5 className='font-semibold text-lg'>Enter Wallet Number</h5>
         <input type="text"

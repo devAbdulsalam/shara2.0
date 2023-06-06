@@ -7,7 +7,7 @@ const ProtectedRoutes = () => {
   const location = useLocation()
   console.log(user)
 
-  return (user ? <Outlet /> : <Navigate to="/login" state={{ path: location.pathname }} replace />)
+  return (user ? <Outlet /> : <Navigate to="/" state={{ path: location.pathname }} replace />)
 
 }
 
